@@ -196,6 +196,7 @@ img{
     flex-wrap: wrap;
     justify-content: space-between;
     margin: auto;
+    row-gap: 2em;
 }
 .single-service{
     flex-basis: 48%;
@@ -440,6 +441,9 @@ hr{
     }
 
     /* Services */
+    .sercive-box{
+        row-gap: 1em;
+    }
     .single-service{
         flex-basis: 100%;
         margin-bottom: 30px;
