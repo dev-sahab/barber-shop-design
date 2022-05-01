@@ -442,7 +442,7 @@ hr{
 
     /* Services */
     .sercive-box{
-        row-gap: 1em;
+        row-gap: inherit;
     }
     .single-service{
         flex-basis: 100%;
