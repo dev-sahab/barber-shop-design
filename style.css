@@ -9,6 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins',serif;
+    box-sizing: border-box;
 }
 img{
     max-width: 100%;
@@ -331,6 +332,9 @@ hr{
 .footer-right .fa {
     color: var(--primary);
 }
+.footer-right .mqry{
+    display: none;
+}
 .footer-img{
     max-width: 370px;
     opacity: .1;
@@ -359,35 +363,57 @@ hr{
     transform: translateY(-7px);
 }
 .copyritht{
-    margin-top: 20px;
+    margin-top: 40px;
     background: var(--primary);
     padding: 20px 0;
     color: #fff;
+    font-weight: 300;
+    font-size: 14px;
 }
 .copyritht span a{
     text-decoration: none;
     color: #fff;
-    font-weight: 600;
+    font-weight: 400;
+    transition: .5s;
 }
 .copyritht span{
     position: relative;
 }
 
-.copyritht span::before,
-.copyritht span::after{
+.copyritht span.branding::before,
+.copyritht span.branding::after{
     content: '';
     width: 100%;
     height: 2px;
-    background: #fff;
     position: absolute;
     left: 0;
+    background: linear-gradient(270deg, #f9ff00, #0fd405, #0054ff, #ff2626);
+    animation: gradient 7s ease infinite;
+    
+	background-size: 400% 400%;
 }
-.copyritht span::before{
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.copyritht span.branding::before{
     top: 0;
 }
-.copyritht span::after{
+.copyritht span.branding::after{
     bottom: 0;
 }
+
+
+
 
 /* Media Query */
 @media screen and (max-width: 770px) {
@@ -433,5 +459,32 @@ hr{
         flex-basis: 100%;
     }
 
+    /* Footer */
+    .footer-left,
+    .footer-right{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .footer-img{
+        top: 25%;
+    }
+    .footer-right i.fa{
+        display: none;
+    }
+    
+    .footer-right .mqry{
+        display: inline !important;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .copyritht .reserved{
+        display: block !important;
+        margin-top: 5px;
+    }
+    .copyritht span.hiphen{
+        display: none;
+    }
 }
 

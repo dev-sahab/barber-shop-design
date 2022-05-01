@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Smooth Scroll CDN -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <!-- Banner Section -->
@@ -26,11 +29,11 @@
     <div id="sideNav">
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Meet Us</a></li>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="#testimonial">Testimonials</a></li>
+                <li><a href="#footer">Meet Us</a></li>
             </ul>
         </nav>
     </div>
@@ -188,9 +191,9 @@
             </div>
             <div class="footer-right">
                 <h1>Get In Touch</h1>
-                <p>#30 abc Colony, xyz City NY <i class="fa fa-solid fa-location-dot"></i></p>
-                <p>example@website.com <i class="fa far fa-envelope"></i></p>
-                <p>+01 234 56789 <i class="fa fa-mobile-alt"></i></p>
+                <p><i class="mqry fa fa-solid fa-location-dot"></i> #30 abc Colony, xyz City NY <i class="fa fa-solid fa-location-dot"></i></p>
+                <p><i class="mqry fa far fa-envelope"></i> example@website.com <i class="fa far fa-envelope"></i></p>
+                <p><i class="mqry fa fa-mobile-alt"></i> +01 234 56789 <i class="fa fa-mobile-alt"></i></p>
             </div>
         </div>
         <div class="social-links">
@@ -198,7 +201,8 @@
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-youtube"></i>
-            <p class="copyritht">&copy Copyright 2022 - All Right Reserved by <span><a href="#">Clever Coder</a></span></p>
+
+            <p class="copyritht">&copy Copyright 2022 <span class="hiphen"> - </span> <span class="reserved"> All Right Reserved by <span class="branding"><a href="#">Clever Coder</a></span></span></p>
         </div>
     </footer>
 
@@ -222,6 +226,20 @@
                 menu.src = 'assets/img/menu.png';
             }
         }
+
+        // All animations will take exactly 500ms
+        let scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+        });
+
+
+        $(document).ready(function(){
+            $('#sideNav a').click(function(){
+                $('#sideNav').css('right', '-250px');
+                menu.src = 'assets/img/menu.png';
+            });
+        });
     </script>
 
 </body>
