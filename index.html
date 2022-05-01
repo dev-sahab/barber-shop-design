@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Shop Website Design - Hair Saloon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Banner Section -->
+    <section id="banner">
+        <img src="assets/img/logo.png" alt="" class="logo">
+        <div class="banner-text">
+            <h1>Hair Studio</h1>
+            <p>Style Your Hair Is Style Your Life</p>
+            <div class="banner-btn">
+                <a href="#"><span></span>Find Out</a>
+                <a href="#"><span></span>Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Meet Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menuBtn">
+        <img src="assets/img/menu.png" id="menu">
+    </div>
+
+    <!-- Features -->
+    <section id="features">
+        <div class="title-text">
+            <p>Features</p>
+            <h1>Why Choose Us</h1>
+        </div>
+        <div class="feature-box">
+            <div class="features">
+                <div class="feature-wrapper">
+                    <h1>Experienced Staff</h1>
+                    <div class="features-desc">
+                        <div class="feature-icon">
+                            <i class="fa fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="feature-text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fuga officiis aperiam cumque, deserunt accusantium dicta quia impedit blanditiis ad?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-wrapper">
+                    <h1>Pre Booking Online</h1>
+                    <div class="features-desc">
+                        <div class="feature-icon">
+                            <i class="fa fa-solid fa-square-check"></i>
+                        </div>
+                        <div class="feature-text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fuga officiis aperiam cumque, deserunt accusantium dicta quia impedit blanditiis ad?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-wrapper">
+                    <h1>Affordable Cost</h1>
+                    <div class="features-desc">
+                        <div class="feature-icon">
+                            <i class="fa fa-solid fa-sack-dollar"></i>
+                        </div>
+                        <div class="feature-text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fuga officiis aperiam cumque, deserunt accusantium dicta quia impedit blanditiis ad?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="features-img">
+                <img src="assets/img/barber-man.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service -->
+    <section id="service">
+        <div class="title-text">
+            <p>Services</p>
+            <h1>We Provide Better</h1>
+        </div>
+        <div class="sercive-box">
+            <div class="single-service">
+                
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- JavaScript -->
+    <script>
+        let menuBtn = document.getElementById('menuBtn');
+        let sideNav = document.getElementById('sideNav');
+        let menu = document.getElementById('menu');
+
+        sideNav.style.right = '-250px';
+
+        menuBtn.onclick = function (){
+            if (sideNav.style.right == '-250px') {
+                sideNav.style.right = '0';
+                menu.src = 'assets/img/close.png';
+            }
+            else{
+                sideNav.style.right = '-250px';
+                
+                menu.src = 'assets/img/menu.png';
+            }
+        }
+    </script>
+
+</body>
+</html>
